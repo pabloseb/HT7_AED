@@ -1,3 +1,9 @@
+/**
+ * @author Pablo Herrera & Jorge Andrino
+ * @since 28/03/2022
+ * Hoja de Trabajo No.7 Algoritmos y Estructuras de Datos
+ */
+
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,8 +17,8 @@ public class UsersView {
             HashMap<String,ArrayList<String>> EnglishDictionary = (HashMap<String, ArrayList<String>>) filedictionary.CreateDictEnglish();
             HashMap<String,ArrayList<String>> SpanishDictionary = (HashMap<String, ArrayList<String>>) filedictionary.CreateDictSpanish();
             HashMap<String,ArrayList<String>> FrenchDictionary = (HashMap<String, ArrayList<String>>) filedictionary.CreateDictFrench();
+            //----------------------------------------------------------------------------------------------------------
 
-            //se instancia un arbol binario de busqueda para acceder a los metodos
             BinarySearchTree bst_english = new BinarySearchTree();
             ArrayList<String> keys = new ArrayList<>(EnglishDictionary.keySet());
             Node root = null;
@@ -41,7 +47,7 @@ public class UsersView {
             System.out.println("Bienvenido al Diccionario Inglés-Español-Frances");
             System.out.println("A Continacion se presentan todas las palabras (en idioma ingles) que actualmente se tienen en el diccionario");
             bst_english.Inorder(root);
-
+            //------------------------------------------------------------------------------------
             //Se inicializa el traductor por archivo
             System.out.println("Por favor, indique alguna de las opciones del menu");
             System.out.println("1.Traducir un documento");
@@ -54,7 +60,7 @@ public class UsersView {
             do{
                 option_keyboard = scanner.nextLine();
             }while(Controller.validation_small(option_keyboard)==false);
-
+            //-----------------------------------------------------------------------------------------------
             String translation="";
             option_casted = Integer.parseInt(option_keyboard);
             if(option_casted == 1){
@@ -76,7 +82,7 @@ public class UsersView {
             }else{
                 System.out.println("Que tenga una buen dia");
             }
-
+            //--------------------------------------------------------------------------------------------
         }catch (FileNotFoundException e){
             System.out.println("No se ha encontrado el archivo, intente de nuevo");
         }//catch block

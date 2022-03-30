@@ -29,11 +29,12 @@ public class BinarySearchTree<E>{
             return CreateNode(data);
         }
         else{
+            int num1 = data.compareTo(node.data);
             //it inserts values to the binary tree depending on the lenght, so the first element with fewer letters wil be the root of the tree
             //the value with more letters will be the last element in the tree
-            if(data.length()<=node.data.length()){
+            if(num1<0){
                 node.left = insert(node.left,data);
-            } else if(data.length()>=node.data.length()){
+            } else if(num1>0){
                 node.right = insert(node.right,data);
             }
         }

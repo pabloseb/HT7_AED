@@ -45,7 +45,7 @@ public class UsersView {
 
             //se imprimen los valores del arbol en Inorder
             System.out.println("Bienvenido al Diccionario Inglés-Español-Frances");
-            System.out.println("A Continacion se presentan todas las palabras (en idioma ingles) que actualmente se tienen en el diccionario");
+            System.out.println("A Continuacion se presentan todas las palabras (en idioma ingles) que actualmente se tienen en el diccionario");
             bst_english.Inorder(root);
             //------------------------------------------------------------------------------------
             //Se inicializa el traductor por archivo
@@ -70,6 +70,7 @@ public class UsersView {
                 System.out.println("Escoja el lenguaje al que desea traducir");
                 System.out.println("E/S/F");
                 String translateLanguaje = scanner.nextLine();
+
                 if(txtLanguage.equals("E")){
                     translation = Controller.Translate(txtLanguage,translateLanguaje,bst_english,root);
                 }else if(txtLanguage.equals("S")){
@@ -79,7 +80,8 @@ public class UsersView {
                 }
                 System.out.println("Traduccion:\n"+translation);
                 System.exit(0);
-            }else{
+            }
+            else{
                 System.out.println("Que tenga una buen dia");
             }
             //--------------------------------------------------------------------------------------------

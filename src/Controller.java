@@ -33,7 +33,6 @@ public class Controller {
             return false;
         }
     }
-
     /**
      * Class that translates a sentence in a txt to a desire language
      * @param txtLanguage
@@ -57,7 +56,7 @@ public class Controller {
         if (txtLanguage.equals(translateLanguage)) {
             System.out.println("No se puede traducir al mismo idioma, intente de nuevo...");
         }
-        else if (txtLanguage.equals("E") && translateLanguage.equals("S")) {
+        if (txtLanguage.equals("E") && translateLanguage.equals("S")) {
             //se crea el diccionario ingles-espaniol
             HashMap dictionary = (HashMap) as.EnglishSpanishDictionary();
             for(int i =0;i<elements_to_compare.size();i++){
@@ -74,7 +73,7 @@ public class Controller {
             }
             }
 
-        else if (txtLanguage.equals("E") && translateLanguage.equals("F")) {
+        if (txtLanguage.equals("E") && translateLanguage.equals("F")) {
             //se crea el diccionario ingles-espaniol
             HashMap dictionary = (HashMap) as.EnglishFrenchDictionary();
             for(int i =0;i<elements_to_compare.size();i++){
@@ -90,7 +89,7 @@ public class Controller {
                 last_translation = last_translation+" "+s;
             }
         }
-        else if (txtLanguage.equals("S") && translateLanguage.equals("E")) {
+        if (txtLanguage.equals("S") && translateLanguage.equals("E")) {
             //se crea el diccionario ingles-espaniol
             HashMap dictionary = (HashMap) as.SpanishEnglishDictionary();
             for(int i =0;i<elements_to_compare.size();i++){
@@ -106,7 +105,7 @@ public class Controller {
                 last_translation = last_translation+" "+s;
             }
         }
-        else if (txtLanguage.equals("S") && translateLanguage.equals("F")) {
+        if (txtLanguage.equals("S") && translateLanguage.equals("F")) {
             //se crea el diccionario ingles-espaniol
             HashMap dictionary = (HashMap) as.SpanishFrenchDictionary();
             for(int i =0;i<elements_to_compare.size();i++){
@@ -122,7 +121,7 @@ public class Controller {
                 last_translation = last_translation+" "+s;
             }
         }
-        else if (txtLanguage.equals("F") && translateLanguage.equals("E")) {
+        if (txtLanguage.equals("F") && translateLanguage.equals("E")) {
             //se crea el diccionario ingles-espaniol
             HashMap dictionary = (HashMap) as.FrenchEnglishDictionary();
             for(int i =0;i<elements_to_compare.size();i++){
@@ -138,7 +137,7 @@ public class Controller {
                 last_translation = last_translation+" "+s;
             }
         }
-        else if (txtLanguage.equals("F") && translateLanguage.equals("S")) {
+        if (txtLanguage.equals("F") && translateLanguage.equals("S")) {
             //se crea el diccionario ingles-espaniol
             HashMap dictionary = (HashMap) as.FrenchSpanishDictionary();
             for(int i =0;i<elements_to_compare.size();i++){
